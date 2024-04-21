@@ -1,0 +1,20 @@
+import javax.swing.JOptionPane;
+
+public class TrueFalseDialog {
+    public static void main(String[] args) {
+        boolean correctAnswer = false;
+
+        while (!correctAnswer) {
+            int response = JOptionPane.showConfirmDialog(null, "Is Java a programming language?", "True or False", JOptionPane.YES_NO_OPTION);
+            
+            if (response == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "You answered correctly.");
+                correctAnswer = true;
+            } else if (response == JOptionPane.NO_OPTION) {
+                JOptionPane.showMessageDialog(null, "That's incorrect. Please try again.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Please select either True or False.");
+            }
+        }
+    }
+}
